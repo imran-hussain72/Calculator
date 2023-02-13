@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.parent{
+    width: 500px;
+    border: 1px solid lightgray;
+    margin: auto;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.one,.two,.three,.four{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+button{
+    width: 100%;
+    padding: 30px 40px 30px 30px;
+    margin: 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.equal{
+    height: 100%;
+    background-color: dodgerblue;
+    color: white;
+}
+.divide{
+    height: fit-content;
+}
+
+input[type=text]{
+    width: 86%;   
+    padding: 20px;
+    margin: 20px 30px 14px 38px;
+    font-size: 30px;
+}
+.one button:first-child,.two button:first-child,.three button:first-child,.four button:first-child{
+    background-color: lightgray;
+}

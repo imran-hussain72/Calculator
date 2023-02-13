@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calc.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="parent">
+      <input id="cal" type="text" />
+      <div class="container">
+        <div class="one">
+          <button>+</button>
+          <button>7</button>
+          <button>4</button>
+          <button>1</button>
+          <button>0</button>
+        </div>
+        <div class="two">
+          <button>-</button>
+          <button>8</button>
+          <button>5</button>
+          <button>2</button>
+          <button><b>.</b></button>
+        </div>
+        <div class="three">
+          <button>*</button>
+          <button>9</button>
+          <button>6</button>
+          <button>3</button>
+          <button>C</button>
+        </div>
+        <div class="four">
+          <button class="divide">/</button>
+          <button class="equal">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let r = document.getElementById("cal");
+    let b = document.getElementsByTagName("button");
+    let text="";
+    for (i = 0; i < b.length; i++) {
+      b[i].addEventListener("click", function calculator(e){
+          let a = e.target.innerText;
+          text += e.target.innerText
+          r.value=text
+        if(a== "C"){
+            r.value=""
+            text=""
+        }else if(a== "="){
+            let x = text.replace("=","")
+            r.value = eval(x)
+            text=""
+        }
+      })}
+  </script>
+</html>
